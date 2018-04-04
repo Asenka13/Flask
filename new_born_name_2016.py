@@ -20,7 +20,7 @@ def names_in_year():
             </tr>'''
     for items in newborn_names:
         names = items.get('Cells')
-        if year in names.values():
+        if names['Year'] == int(year):
             table_str = table_str + '''
                 <tr>
                     <td>%s</td>
